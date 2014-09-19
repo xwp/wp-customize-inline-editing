@@ -4,7 +4,7 @@
 Demonstration of how inline editing can be added to the Customizer.
 
 **Contributors:** [x-team](http://profiles.wordpress.org/x-team), [westonruter](http://profiles.wordpress.org/westonruter)  
-**Tags:** [](http://wordpress.org/plugins/tags/)  
+**Tags:** [customizer](http://wordpress.org/plugins/tags/customizer), [customize](http://wordpress.org/plugins/tags/customize), [inline](http://wordpress.org/plugins/tags/inline), [editing](http://wordpress.org/plugins/tags/editing)  
 **Requires at least:** 4.0  
 **Tested up to:** 4.0  
 **Stable tag:**   

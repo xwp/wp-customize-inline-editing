@@ -1,5 +1,6 @@
 === Customize Inline Editing ===
 Contributors: X-team, westonruter
+Tags: customizer, customize, inline, editing
 Requires at least: 4.0
 Tested up to: 4.0
 License: GPLv2 or later
