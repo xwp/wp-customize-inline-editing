@@ -53,3 +53,8 @@ the element, the `contentEditable` state is removed. The setting may still be ed
 control in the Customizer pane as well.
 
 Only basic text fields can currently be edited; styling and any tags added to `contentEditable` areas will be stripped out.
+
+== Changelog ==
+
+= 0.1 =
+First release.
