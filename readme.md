@@ -20,7 +20,14 @@ a setting. Instead, they can just click on the relevant element in the Customize
 and edit the item inline. It could be said that adding inline-editing to the Customizer
 improves the UX so much over `postMessage` live editing, as `postMessage` is an improvement
 over the `refresh` transport. There is no need to hunt for the right control,
-and can actually edit with the Customizer pane *collapsed*!
+and can actually edit with the Customizer pane *collapsed*! Here is a demonstration:
+
+[![Play video on YouTube](http://i1.ytimg.com/vi/1OA8MUI-364/hqdefault.jpg)](http://www.youtube.com/watch?v=1OA8MUI-364)
+
+**Important:** This plugin is not intended to compete with [avryl](http://jannekevandorpe.com/)'s great [Front-end Editor plugin](http://wordpress.org/plugins/wp-front-end-editor/).
+In fact, [she is re-writing her plugin to leverage the Customizer](https://github.com/avryl/wp-front-end-editor/issues/87#issuecomment-55146044).
+This plugin is just a quick demonstration of how simple the Customizer can be extended to support
+inline editing—moving the controls within the preview itself.
 
 This plugin provides one example implementation of inline-editing this can be accomplished in the Customizer.
 
@@ -50,13 +57,4 @@ the element, the `contentEditable` state is removed. The setting may still be ed
 control in the Customizer pane as well.
 
 Only basic text fields can currently be edited; styling and any tags added to `contentEditable` areas will be stripped out.
-
-Here is a demonstration:
-
-[![Play video on YouTube](http://i1.ytimg.com/vi/1OA8MUI-364/hqdefault.jpg)](http://www.youtube.com/watch?v=1OA8MUI-364)
-
-**Important:** This plugin is not intended to compete with [avryl](http://jannekevandorpe.com/)'s great [Front-end Editor plugin](http://wordpress.org/plugins/wp-front-end-editor/).
-In fact, [she is re-writing her plugin to leverage the Customizer](https://github.com/avryl/wp-front-end-editor/issues/87#issuecomment-55146044).
-This plugin is just a quick demonstration of how simple the Customizer can be extended to support
-inline editing—moving the controls within the preview itself.
 
