@@ -44,7 +44,8 @@ add_theme_support( 'customize-inline-editing', array(
 ) );
 </code></pre>
 
-The plugin is bundled with built-in support for the Core Twenty* themes, so you can
+The plugin is bundled with built-in support for the Core Twenty* themes to
+edit-inline the **site title** (`blogname`) and **tagline** (`blogdescription`), so you can
 use the plugin with these themes as-is.
 
 Hover over an element that is inline-editable and a tooltip appears:
