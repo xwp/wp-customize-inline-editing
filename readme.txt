@@ -1,0 +1,46 @@
+=== Customize Inline Editing ===
+Contributors: X-team, westonruter
+Requires at least: 4.0
+Tested up to: 4.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Demonstration of how inline editing can be added to the Customizer.
+
+== Description ==
+
+It is surprisingly easy to add inline editing support to the Customizer. With inline
+editing, the user no longer has to open a control in the left Customizer pane to edit
+a setting. Instead, they can just click on the relevant element in the Customizer preview
+and edit the item inline. This plugin provides one example implementation of how this can
+be accomplished. Themes can opt-in to support such inline-editing within the Customizer
+by indicating the theme supports `customize-inline-editing` and then passing an array
+Customizer setting names mapped to CSS selectors, similar to how most themes already
+opt-in for `postMessage` transport:
+
+<pre><code>
+add_theme_support( 'customize-inline-editing', array(
+	'blogname' => '.site-title a',
+	'blogdescription' => '.site-description',
+	// ...
+) );
+</code></pre>
+
+The plugin is bundled with built-in support for the Core Twenty* themes, so you can
+use the plugin with these themes as-is.
+
+Hover over an element that is inline-editable and a tooltip appears:
+
+> Shift + Click to edit inline.
+
+Doing so turns the element into a `contentEditable` area. Any change to the text in this
+element will be then synced up to the Customizer's setting model. Upon clicking out (blurring) of
+the element, the `contentEditable` state is removed. The setting may still be edited via the
+control in the Customizer pane as well.
+
+Only basic text fields can currently be edited; styling and any tags added to `contentEditable` areas will be stripped out.
+
+**Important:** This plugin is not intended to compete with [avryl](http://jannekevandorpe.com/)'s great [Front-end Editor plugin](http://wordpress.org/plugins/wp-front-end-editor/).
+In fact, [she is re-writing her plugin to leverage the Customizer](https://github.com/avryl/wp-front-end-editor/issues/87#issuecomment-55146044).
+This plugin is just a quick demonstration of how simple the Customizer can be extended to support
+inline editing—moving the controls within the preview itself.
