@@ -47,7 +47,8 @@ class Customize_Inline_Editing {
 	}
 
 	/**
-	 *
+	 * Grab the setting element selectors defined in the customize-inline-editing theme support,
+	 * or provide fallback defaults for themes bundled with Core.
 	 *
 	 * @return array
 	 */
@@ -61,8 +62,8 @@ class Customize_Inline_Editing {
 				$setting_element_selectors['blogname'] = '#branding a[rel=home]';
 				$setting_element_selectors['blogdescription'] = '#site-description';
 			} elseif ( 'twentyeleven' === get_template() ) {
-				$setting_element_selectors['blogname'] = '.site-title a';
-				$setting_element_selectors['blogdescription'] = '.site-description';
+				$setting_element_selectors['blogname'] = '#site-title a';
+				$setting_element_selectors['blogdescription'] = '#site-description';
 			} elseif ( 'twentytwelve' === get_template() ) {
 				$setting_element_selectors['blogname'] = '.site-title a';
 				$setting_element_selectors['blogdescription'] = '.site-description';
@@ -88,7 +89,7 @@ class Customize_Inline_Editing {
 	 */
 	function enqueue_pane_scripts() {
 		$handle = 'customize-inline-editing-pane';
-		$src = plugin_dir_url( __FILE__ ) . '/customize-pane.js';
+		$src = plugin_dir_url( __FILE__ ) . 'customize-pane.js';
 		$deps = array( 'jquery', 'customize-controls' );
 		wp_enqueue_script( $handle, $src, $deps );
 		$data = array();
@@ -100,14 +101,14 @@ class Customize_Inline_Editing {
 	 */
 	function enqueue_preview_scripts() {
 		$handle = 'customize-inline-editing-preview';
-		$src = plugin_dir_url( __FILE__ ) . '/customize-preview.js';
+		$src = plugin_dir_url( __FILE__ ) . 'customize-preview.js';
 		$deps = array( 'jquery', 'customize-preview' );
 		wp_enqueue_script( $handle, $src, $deps );
 		$data = array(
 			'settingElementSelectors' => $this->get_theme_support(),
 			'l10n' => array(
-				'shiftClickNotice' => __( 'Shift + Click to edit inline.', 'customize-inline-editing-example' )
-			)
+				'shiftClickNotice' => __( 'Shift + Click to edit inline.', 'customize-inline-editing' ),
+			),
 		);
 		$this->export_script_data( $handle, '_CustomizeInlineEditingPreview_exports', $data );
 	}

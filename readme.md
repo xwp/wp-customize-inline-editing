@@ -17,8 +17,13 @@ Demonstration of how inline editing can be added to the Customizer.
 It is surprisingly easy to add inline editing support to the Customizer. With inline
 editing, the user no longer has to open a control in the left Customizer pane to edit
 a setting. Instead, they can just click on the relevant element in the Customizer preview
-and edit the item inline. This plugin provides one example implementation of how this can
-be accomplished. Themes can opt-in to support such inline-editing within the Customizer
+and edit the item inline. It could be said that adding inline-editing to the Customizer
+improves the UX so much over `postMessage` live editing, as `postMessage` is an improvement
+over the `refresh` transport`.
+
+This plugin provides one example implementation of inline-editing this can be accomplished in the Customizer.
+
+Themes can opt-in to support such inline-editing within the Customizer
 by indicating the theme supports `customize-inline-editing` and then passing an array
 Customizer setting names mapped to CSS selectors, similar to how most themes already
 opt-in for `postMessage` transport:
@@ -44,6 +49,10 @@ the element, the `contentEditable` state is removed. The setting may still be ed
 control in the Customizer pane as well.
 
 Only basic text fields can currently be edited; styling and any tags added to `contentEditable` areas will be stripped out.
+
+Here is a demonstration:
+
+[![Play video on YouTube](http://i1.ytimg.com/vi/t_qD4Sp4E70/hqdefault.jpg)](http://www.youtube.com/watch?v=t_qD4Sp4E70)
 
 **Important:** This plugin is not intended to compete with [avryl](http://jannekevandorpe.com/)'s great [Front-end Editor plugin](http://wordpress.org/plugins/wp-front-end-editor/).
 In fact, [she is re-writing her plugin to leverage the Customizer](https://github.com/avryl/wp-front-end-editor/issues/87#issuecomment-55146044).
