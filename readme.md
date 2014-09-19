@@ -27,7 +27,7 @@ and can actually edit with the Customizer pane *collapsed*! Here is a demonstrat
 **Important:** This plugin is not intended to compete with [avryl](http://jannekevandorpe.com/)'s great [Front-end Editor plugin](http://wordpress.org/plugins/wp-front-end-editor/).
 In fact, [she is re-writing her plugin to leverage the Customizer](https://github.com/avryl/wp-front-end-editor/issues/87#issuecomment-55146044).
 This plugin is just a quick demonstration of how simple the Customizer can be extended to support
-inline editing—moving the controls within the preview itself.
+inline editing—moving the controls into the preview itself.
 
 This plugin provides one example implementation of inline-editing this can be accomplished in the Customizer.
 
