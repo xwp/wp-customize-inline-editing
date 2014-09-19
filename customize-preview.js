@@ -82,7 +82,9 @@ var CustomizeInlineEditingPreview = ( function ( $, api ) {
 		if ( e.shiftKey || el.hasClass( 'customize-inline-editing' ) ) {
 			e.preventDefault();
 			e.stopPropagation(); // prevent click.preview on body from firing in customize-preview.js
-			self.startEditing( el, e.data.settingName );
+			if ( ! el.hasClass( 'customize-inline-editing' ) ) {
+				self.startEditing( el, e.data.settingName );
+			}
 		}
 	};
 
@@ -90,13 +92,11 @@ var CustomizeInlineEditingPreview = ( function ( $, api ) {
 	 * Set up CustomizeInlineEditingPreview upon DOM ready.
 	 */
 	self.init = function () {
-
 		$.each( self.settingElementSelectors, function ( settingName, selector ) {
-			if ( api( settingName ).get() ) {
+			if ( api( settingName ) ) {
 				$( selector )
 					.on( 'click', { settingName: settingName }, self.clickElement )
 					.prop( 'title', self.l10n.shiftClickNotice );
-
 			}
 		} );
 
