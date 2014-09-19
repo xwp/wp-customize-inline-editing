@@ -20,7 +20,7 @@ a setting. Instead, they can just click on the relevant element in the Customize
 and edit the item inline. It could be said that adding inline-editing to the Customizer
 improves the UX so much over `postMessage` live editing, as `postMessage` is an improvement
 over the `refresh` transport. There is no need to hunt for the right control,
-and can actually edit with the Customizer pane *collapsed*! Here is a demonstration:
+and can actually edit with the Customizer pane *collapsed!* Here is a demonstration:
 
 [![Play video on YouTube](http://i1.ytimg.com/vi/1OA8MUI-364/hqdefault.jpg)](http://www.youtube.com/watch?v=1OA8MUI-364)
 
@@ -57,6 +57,8 @@ the element, the `contentEditable` state is removed. The setting may still be ed
 control in the Customizer pane as well.
 
 Only basic text fields can currently be edited; styling and any tags added to `contentEditable` areas will be stripped out.
+
+**Development of this plugin is done [on GitHub](https://github.com/x-team/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/x-team/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
 
 ## Changelog ##
 
