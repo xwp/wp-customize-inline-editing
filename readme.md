@@ -19,7 +19,8 @@ editing, the user no longer has to open a control in the left Customizer pane to
 a setting. Instead, they can just click on the relevant element in the Customizer preview
 and edit the item inline. It could be said that adding inline-editing to the Customizer
 improves the UX so much over `postMessage` live editing, as `postMessage` is an improvement
-over the `refresh` transport`.
+over the `refresh` transport. There is no need to hunt for the right control,
+and can actually edit with the Customizer pane *collapsed*!
 
 This plugin provides one example implementation of inline-editing this can be accomplished in the Customizer.
 
@@ -52,7 +53,7 @@ Only basic text fields can currently be edited; styling and any tags added to `c
 
 Here is a demonstration:
 
-[![Play video on YouTube](http://i1.ytimg.com/vi/t_qD4Sp4E70/hqdefault.jpg)](http://www.youtube.com/watch?v=t_qD4Sp4E70)
+[![Play video on YouTube](http://i1.ytimg.com/vi/1OA8MUI-364/hqdefault.jpg)](http://www.youtube.com/watch?v=1OA8MUI-364)
 
 **Important:** This plugin is not intended to compete with [avryl](http://jannekevandorpe.com/)'s great [Front-end Editor plugin](http://wordpress.org/plugins/wp-front-end-editor/).
 In fact, [she is re-writing her plugin to leverage the Customizer](https://github.com/avryl/wp-front-end-editor/issues/87#issuecomment-55146044).
