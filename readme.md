@@ -10,7 +10,7 @@ Demonstration of how inline editing can be added to the Customizer.
 **Stable tag:**   
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
-[![Build Status](https://travis-ci.org/westonruter/wp-customize-inline-editing.png?branch=master)](https://travis-ci.org/westonruter/wp-customize-inline-editing) 
+[![Build Status](https://travis-ci.org/x-team/wp-customize-inline-editing.png?branch=master)](https://travis-ci.org/x-team/wp-customize-inline-editing) 
 
 ## Description ##
 
