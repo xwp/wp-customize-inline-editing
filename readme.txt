@@ -2,7 +2,7 @@
 Contributors: xwp, westonruter
 Tags: customizer, customize, inline, editing
 Requires at least: 4.0
-Tested up to: 4.0
+Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,9 @@ Only basic text fields can currently be edited; styling and any tags added to `c
 **Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
 
 == Changelog ==
+
+= 0.1.1 =
+Add support for Twenty Fifteen and ensure compat with WordPress 4.1
 
 = 0.1 =
 First release.
