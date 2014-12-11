@@ -3,13 +3,13 @@
  * Plugin Name: Customize Inline Editing
  * Description: Demonstration of how inline editing can be added to the Customizer.
  * Version: 0.1
- * Author: X-Team WP, Weston Ruter
- * Author URI: https://x-team-wp.com
+ * Author: XWP, Weston Ruter
+ * Author URI: https://xwp.co
  * License: GPLv2+
  */
 
 /**
- * Copyright (c) 2014 X-Team WP (https://x-team-wp.com)
+ * Copyright (c) 2014 XWP (https://xwp.co/)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at

@@ -1,5 +1,5 @@
 === Customize Inline Editing ===
-Contributors: X-team, westonruter
+Contributors: xwp, westonruter
 Tags: customizer, customize, inline, editing
 Requires at least: 4.0
 Tested up to: 4.0
@@ -55,7 +55,7 @@ control in the Customizer pane as well.
 
 Only basic text fields can currently be edited; styling and any tags added to `contentEditable` areas will be stripped out.
 
-**Development of this plugin is done [on GitHub](https://github.com/x-team/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/x-team/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
+**Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
 
 == Changelog ==
 
