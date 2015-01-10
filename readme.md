@@ -3,8 +3,8 @@
 
 Demonstration of how inline editing can be added to the Customizer.
 
-**Contributors:** [xwp](http://profiles.wordpress.org/xwp), [westonruter](http://profiles.wordpress.org/westonruter)  
-**Tags:** [customizer](http://wordpress.org/plugins/tags/customizer), [customize](http://wordpress.org/plugins/tags/customize), [inline](http://wordpress.org/plugins/tags/inline), [editing](http://wordpress.org/plugins/tags/editing)  
+**Contributors:** [xwp](https://profiles.wordpress.org/xwp), [westonruter](https://profiles.wordpress.org/westonruter)  
+**Tags:** [customizer](https://wordpress.org/plugins/tags/customizer), [customize](https://wordpress.org/plugins/tags/customize), [inline](https://wordpress.org/plugins/tags/inline), [editing](https://wordpress.org/plugins/tags/editing)  
 **Requires at least:** 4.0  
 **Tested up to:** 4.1  
 **Stable tag:**   
@@ -22,7 +22,7 @@ improves the UX so much over `postMessage` live editing, as `postMessage` is an 
 over the `refresh` transport. There is no need to hunt for the right control,
 and can actually edit with the Customizer pane *collapsed!* Here is a demonstration:
 
-[![Play video on YouTube](http://i1.ytimg.com/vi/1OA8MUI-364/hqdefault.jpg)](http://www.youtube.com/watch?v=1OA8MUI-364)
+[![Play video on YouTube](https://i1.ytimg.com/vi/1OA8MUI-364/hqdefault.jpg)](https://www.youtube.com/watch?v=1OA8MUI-364)
 
 **Important:** This plugin is not intended to compete with [avryl](http://jannekevandorpe.com/)'s great [Front-end Editor plugin](http://wordpress.org/plugins/wp-front-end-editor/).
 In fact, [she is re-writing her plugin to leverage the Customizer](https://github.com/avryl/wp-front-end-editor/issues/87#issuecomment-55146044).
