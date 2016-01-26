@@ -9,7 +9,7 @@
  */
 
 /**
- * Copyright (c) 2014 XWP (https://xwp.co/)
+ * Copyright (c) 2015 XWP (https://xwp.co/)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at
@@ -96,7 +96,7 @@ class Customize_Inline_Editing {
 		$deps = array( 'jquery', 'customize-controls' );
 		wp_enqueue_script( $handle, $src, $deps );
 		$data = array();
-		$this->export_script_data( $handle, '_CustomizeInlineEditingPane_exports', $data );
+		$this->export_script_data( $handle, '_customizeInlineEditingPaneExports', $data );
 	}
 
 	/**
@@ -113,22 +113,22 @@ class Customize_Inline_Editing {
 				'shiftClickNotice' => __( 'Shift + Click to edit inline.', 'customize-inline-editing' ),
 			),
 		);
-		$this->export_script_data( $handle, '_CustomizeInlineEditingPreview_exports', $data );
+		$this->export_script_data( $handle, '_customizeInlineEditingPreviewExports', $data );
 	}
 
 	/**
 	 * Export the given JSON-serializable $exported_data to JavaScript with name $exported_name.
 	 *
-	 * @param string $handle Script handle.
-	 * @param string $exported_name Name of the variable that will be exported, such as 'foo' or 'bar.baz.qux'; gets prefixed by 'window.'
-	 * @param mixed $exported_data JSON-serializable data
+	 * @param string $handle        Script handle.
+	 * @param string $exported_name Name of the variable that will be exported, such as 'foo' or 'bar.baz.qux'; gets prefixed by 'window'.
+	 * @param mixed  $exported_data JSON-serializable data.
 	 *
-	 * @throws Exception when the supplied $exported_name is not valid JS
-	 * @throws Exception when the $exported_data is not JSON-serializable
+	 * @throws Exception When the supplied $exported_name is not valid JS.
+	 * @throws Exception When the $exported_data is not JSON-serializable.
 	 */
 	function export_script_data( $handle, $exported_name, $exported_data ) {
 		global $wp_scripts;
-		$serialized = json_encode( $exported_data );
+		$serialized = wp_json_encode( $exported_data );
 		$data = sprintf( 'window.%s = %s;', $exported_name, $serialized );
 		$wp_scripts->add_data( $handle, 'data', $data );
 	}

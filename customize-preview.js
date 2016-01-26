@@ -1,87 +1,77 @@
-/*global jQuery, wp, _CustomizeInlineEditingPreview_exports */
+/*global jQuery, wp, _customizeInlineEditingPreviewExports */
 /*exported CustomizeInlineEditingPreview */
-var CustomizeInlineEditingPreview = ( function ( $, api ) {
+var CustomizeInlineEditingPreview = ( function( $, api ) {
 	'use strict';
-	var self, OldPreview;
+	var self;
 
 	self = {
 		settingElementSelectors: {},
-		preview: {},
 		l10n: {
 			shiftClickNotice: ''
 		}
 	};
-	$.extend( self, _CustomizeInlineEditingPreview_exports );
-	window._CustomizeInlineEditingPreview_exports = null;
-
-	/*
-	 * Capture the instance of the Preview since it is private
-	 * @todo The need for doing this in the preview should also have been done in https://core.trac.wordpress.org/ticket/27666
-	 */
-	OldPreview = api.Preview;
-	api.Preview = OldPreview.extend( {
-		initialize: function( params, options ) {
-			self.preview = this;
-			OldPreview.prototype.initialize.call( this, params, options );
-		}
-	} );
+	$.extend( self, _customizeInlineEditingPreviewExports );
+	window._customizeInlineEditingPreviewExports = null;
 
 	/**
+	 * Start inline editing.
 	 *
-	 * @param element
-	 * @param settingName
+	 * @param {jQuery} element
+	 * @param {string} settingName
 	 */
-	self.startEditing = function ( element, settingName ) {
+	self.startEditing = function( element, settingName ) {
 		var el = $( element );
 		if ( el.hasClass( 'customize-inline-editing' ) ) {
 			return;
 		}
 
-		el.on( 'blur', { settingName: settingName }, function () {
+		el.on( 'blur', { settingName: settingName }, function() {
 			self.stopEditing( element, settingName );
 		} );
 		el.addClass( 'customize-inline-editing' );
 		el.attr( 'contentEditable', 'true' );
-		el.on( 'input keypress change', { settingName: settingName }, self.inputElement );
+		el.on( 'input keypress change', { settingName: settingName }, self.onInputElement );
 		el.focus();
 	};
 
 	/**
+	 * Handle changing input value.
 	 *
-	 * @param settingName
-	 * @param value
+	 * @param {jQuery.Event} e
 	 */
-	self.inputElement = function ( e ) {
+	self.onInputElement = function( e ) {
 		var value = $( this ).text();
-		self.preview.send( 'inline-editing-setting', {
+		api.preview.send( 'inline-editing-setting', {
 			name: e.data.settingName,
 			value: value
 		} );
 	};
 
 	/**
+	 * Stop inline editing.
 	 *
-	 * @param element
-	 * @param settingName
+	 * @param {jQuery} element
+	 * @param {string} settingName
 	 */
-	self.stopEditing = function ( element, settingName ) {
+	self.stopEditing = function( element, settingName ) {
 		var el = $( element );
 		$( element ).removeClass( 'customize-inline-editing' );
 		el.attr( 'contentEditable', 'false' );
-		el.text( el.text() ); // strip out any markup added
-		el.off( 'input keypress change', self.inputElement );
-		self.preview.send( 'inline-editing-stop', { name: settingName } );
+		el.text( el.text() ); // Strip out any markup added.
+		el.off( 'input keypress change', self.onInputElement );
+		api.preview.send( 'inline-editing-stop', { name: settingName } );
 	};
 
 	/**
+	 * Handle clicking on an element.
 	 *
 	 * @param {jQuery.Event} e
 	 */
-	self.clickElement = function ( e ) {
+	self.onClickElement = function( e ) {
 		var el = $( this );
 		if ( e.shiftKey || el.hasClass( 'customize-inline-editing' ) ) {
 			e.preventDefault();
-			e.stopPropagation(); // prevent click.preview on body from firing in customize-preview.js
+			e.stopPropagation(); // Prevent click.preview on body from firing in customize-preview.js
 			if ( ! el.hasClass( 'customize-inline-editing' ) ) {
 				self.startEditing( el, e.data.settingName );
 			}
@@ -91,18 +81,18 @@ var CustomizeInlineEditingPreview = ( function ( $, api ) {
 	/**
 	 * Set up CustomizeInlineEditingPreview upon DOM ready.
 	 */
-	self.init = function () {
-		$.each( self.settingElementSelectors, function ( settingName, selector ) {
+	self.init = function() {
+		$.each( self.settingElementSelectors, function( settingName, selector ) {
 			if ( api( settingName ) ) {
 				$( selector )
-					.on( 'click', { settingName: settingName }, self.clickElement )
+					.on( 'click', { settingName: settingName }, self.onClickElement )
 					.prop( 'title', self.l10n.shiftClickNotice );
 			}
 		} );
 
 	};
 
-	$( function () {
+	$( function() {
 		self.init();
 	} );
 

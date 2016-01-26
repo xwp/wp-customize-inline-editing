@@ -5,12 +5,11 @@ Demonstration of how inline editing can be added to the Customizer.
 
 **Contributors:** [xwp](https://profiles.wordpress.org/xwp), [westonruter](https://profiles.wordpress.org/westonruter)  
 **Tags:** [customizer](https://wordpress.org/plugins/tags/customizer), [customize](https://wordpress.org/plugins/tags/customize), [inline](https://wordpress.org/plugins/tags/inline), [editing](https://wordpress.org/plugins/tags/editing)  
-**Requires at least:** 4.0  
-**Tested up to:** 4.1  
-**Stable tag:**   
+**Requires at least:** 4.4  
+**Tested up to:** 4.5-alpha  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
-[![Build Status](https://travis-ci.org/xwp/wp-customize-inline-editing.png?branch=master)](https://travis-ci.org/xwp/wp-customize-inline-editing) 
+[![Build Status](https://travis-ci.org/xwp/wp-customize-inline-editing.svg?branch=master)](https://travis-ci.org/xwp/wp-customize-inline-editing) 
 
 ## Description ##
 

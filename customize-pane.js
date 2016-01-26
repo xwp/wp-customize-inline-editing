@@ -1,18 +1,19 @@
-/*global jQuery, wp, _CustomizeInlineEditingPane_exports */
+/*global jQuery, wp, _customizeInlineEditingPaneExports */
 /*exported CustomizeInlineEditingPane */
-var CustomizeInlineEditingPane = ( function ( $, api ) {
+var CustomizeInlineEditingPane = ( function( $, api ) {
 	'use strict';
 
 	var self = {};
-	$.extend( self, _CustomizeInlineEditingPane_exports );
-	window._CustomizeInlineEditingPane_exports = null;
+	$.extend( self, _customizeInlineEditingPaneExports );
+	window._customizeInlineEditingPaneExports = null;
 
-	self.init = function () {
+	self.init = function() {
 
 		// Listen for the preview sending updates for settings
-		api.previewer.bind( 'inline-editing-setting', function ( previewSetting ) {
+		api.previewer.bind( 'inline-editing-setting', function( previewSetting ) {
 			var setting = api( previewSetting.name );
 			if ( setting ) {
+
 				// Turn off refresh/postMessage transport so we don't clobber inline editing
 				if ( 'inlineEditing' !== setting.transport ) {
 					setting.originalTransport = setting.transport;
@@ -23,7 +24,7 @@ var CustomizeInlineEditingPane = ( function ( $, api ) {
 		} );
 
 		// Reset setting transport when inline editing is over
-		api.previewer.bind( 'inline-editing-stop', function ( previewSetting ) {
+		api.previewer.bind( 'inline-editing-stop', function( previewSetting ) {
 			var setting = api( previewSetting.name );
 			if ( setting ) {
 				setting.transport = setting.originalTransport || 'refresh';
@@ -31,7 +32,7 @@ var CustomizeInlineEditingPane = ( function ( $, api ) {
 		} );
 	};
 
-	api.bind( 'ready', function () {
+	api.bind( 'ready', function() {
 		self.init();
 	} );
 
