@@ -75,6 +75,9 @@ class Customize_Inline_Editing {
 			} elseif ( 'twentyfifteen' === get_template() ) {
 				$setting_element_selectors['blogname'] = '.site-title a';
 				$setting_element_selectors['blogdescription'] = '.site-description';
+			} elseif ( 'twentysixteen' === get_template() ) {
+				$setting_element_selectors['blogname'] = '.site-title a';
+				$setting_element_selectors['blogdescription'] = '.site-description';
 			}
 		}
 		return $setting_element_selectors;
