@@ -6,7 +6,7 @@ Demonstration of how inline editing can be added to the Customizer.
 **Contributors:** [xwp](https://profiles.wordpress.org/xwp), [westonruter](https://profiles.wordpress.org/westonruter)  
 **Tags:** [customizer](https://wordpress.org/plugins/tags/customizer), [customize](https://wordpress.org/plugins/tags/customize), [inline](https://wordpress.org/plugins/tags/inline), [editing](https://wordpress.org/plugins/tags/editing)  
 **Requires at least:** 4.4  
-**Tested up to:** 4.5-alpha  
+**Tested up to:** 4.6-beta2  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
 [![Build Status](https://travis-ci.org/xwp/wp-customize-inline-editing.svg?branch=master)](https://travis-ci.org/xwp/wp-customize-inline-editing) 
@@ -61,6 +61,9 @@ Only basic text fields can currently be edited; styling and any tags added to `c
 **Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
 
 ## Changelog ##
+
+### 0.1.2 ###
+Add support for Twenty Sixteen and ensure compat with WordPress 4.6-beta2
 
 ### 0.1.1 ###
 Add support for Twenty Fifteen and ensure compat with WordPress 4.1
