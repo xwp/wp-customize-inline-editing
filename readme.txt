@@ -59,6 +59,12 @@ Only basic text fields can currently be edited; styling and any tags added to `c
 
 == Changelog ==
 
+= 0.1.3 =
+Ensure that any selective refresh partials associated with the edited settings
+will get re-rendered from the server once editing has finished. Refreshed partials
+will ensure that the low-fidelity JS-supplied (raw) previews will be replaced with
+the actual high-fidelity PHP-rendered preview from the server. See also [#33738](https://core.trac.wordpress.org/ticket/33738).
+
 = 0.1.2 =
 Add support for Twenty Sixteen and ensure compat with WordPress 4.6-beta2
 

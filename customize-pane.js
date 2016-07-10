@@ -28,6 +28,16 @@ var CustomizeInlineEditingPane = ( function( $, api ) {
 			var setting = api( previewSetting.name );
 			if ( setting ) {
 				setting.transport = setting.originalTransport || 'refresh';
+
+				/*
+				 * When editing has finished, re-preview the change to ensure that
+				 * any associated partials are refreshed so that the low-fidelity
+				 * JS-supplied preview will be replaced with the actual high-fidelity
+				 * PHP-rendered preview from the server. See #33738.
+				 */
+				if ( 'postMessage' === setting.transport ) {
+					setting.preview();
+				}
 			}
 		} );
 	};
