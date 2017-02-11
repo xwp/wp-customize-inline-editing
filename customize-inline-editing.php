@@ -2,12 +2,12 @@
 /**
  * Plugin Name: Customize Inline Editing
  * Description: Demonstration of how inline editing can be added to the Customizer.
- * Version: 0.1.3
+ * Version: 0.2.0-alpha
  * Author: XWP, Weston Ruter
  * Author URI: https://make.xwp.co
  * License: GPLv2+
  *
- * Copyright (c) 2015 XWP (https://xwp.co/)
+ * Copyright (c) 2014-2017 XWP (https://make.xwp.co/)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at
