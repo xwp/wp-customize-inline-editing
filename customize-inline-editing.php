@@ -98,7 +98,7 @@ class Customize_Inline_Editing {
 	 */
 	function enqueue_pane_scripts() {
 		$handle = 'customize-inline-editing-pane';
-		$src = plugin_dir_url( __FILE__ ) . 'customize-pane.js';
+		$src = plugin_dir_url( __FILE__ ) . 'js/customize-pane.js';
 		$deps = array( 'jquery', 'customize-controls' );
 		wp_enqueue_script( $handle, $src, $deps );
 		$data = array();
@@ -110,7 +110,7 @@ class Customize_Inline_Editing {
 	 */
 	function enqueue_preview_scripts() {
 		$handle = 'customize-inline-editing-preview';
-		$src = plugin_dir_url( __FILE__ ) . 'customize-preview.js';
+		$src = plugin_dir_url( __FILE__ ) . 'js/customize-preview.js';
 		$deps = array( 'jquery', 'customize-preview' );
 		wp_enqueue_script( $handle, $src, $deps );
 		$data = array(
