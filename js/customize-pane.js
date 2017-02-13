@@ -1,50 +1,48 @@
-/*global jQuery, wp, _customizeInlineEditingPaneExports */
+/*global jQuery, wp */
 /*exported CustomizeInlineEditingPane */
 var CustomizeInlineEditingPane = ( function( $, api ) {
 	'use strict';
 
-	var self = {};
-	$.extend( self, _customizeInlineEditingPaneExports );
-	window._customizeInlineEditingPaneExports = null;
-
-	self.init = function() {
-
-		// Listen for the preview sending updates for settings
-		api.previewer.bind( 'inline-editing-setting', function( previewSetting ) {
-			var setting = api( previewSetting.name );
-			if ( setting ) {
-
-				// Turn off refresh/postMessage transport so we don't clobber inline editing
-				if ( 'inlineEditing' !== setting.transport ) {
-					setting.originalTransport = setting.transport;
-					setting.transport = 'inlineEditing';
-				}
-				setting.set( previewSetting.value );
-			}
-		} );
-
-		// Reset setting transport when inline editing is over
-		api.previewer.bind( 'inline-editing-stop', function( previewSetting ) {
-			var setting = api( previewSetting.name );
-			if ( setting ) {
-				setting.transport = setting.originalTransport || 'refresh';
-
-				/*
-				 * When editing has finished, re-preview the change to ensure that
-				 * any associated partials are refreshed so that the low-fidelity
-				 * JS-supplied preview will be replaced with the actual high-fidelity
-				 * PHP-rendered preview from the server. See #33738.
-				 */
-				if ( 'postMessage' === setting.transport ) {
-					setting.preview();
-				}
-			}
-		} );
+	var component = {
+		data: {
+			inline_editable_settings: []
+		}
 	};
 
-	api.bind( 'ready', function() {
-		self.init();
-	} );
+	/**
+	 * Init.
+	 *
+	 * @param {object} data Data.
+	 * @returns {void}
+	 */
+	component.init = function( data ) {
+		if ( data ) {
+			_.extend( component.data, data );
+		}
+		api.bind( 'ready', component.ready );
+	};
 
-	return self;
-}( jQuery, wp.customize ) );
+	/**
+	 * Ready.
+	 *
+	 * @returns {void}
+	 */
+	component.ready = function ready() {
+		api.previewer.bind( 'setting', component.receiveSettingMessage );
+	};
+
+	/**
+	 * Listen for setting changes related to inline editing.
+	 *
+	 * @param {Array} args Args.
+	 * @returns {void}
+	 */
+	component.receiveSettingMessage = function receiveSettingMessage( args ) {
+		var settingId = args[0], value = args[1];
+		if ( api.has( settingId ) && -1 !== component.data.inline_editable_settings.indexOf( settingId ) ) {
+			api( settingId ).set( value );
+		}
+	};
+
+	return component;
+} )( jQuery, wp.customize );
