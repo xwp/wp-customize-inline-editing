@@ -21,7 +21,7 @@ improves the UX so much over `postMessage` live editing, as `postMessage` is an 
 over the `refresh` transport. There is no need to hunt for the right control,
 and can actually edit with the customizer pane *collapsed!* Here is a demonstration:
 
-[![Play video on YouTube](https://i1.ytimg.com/vi/1OA8MUI-364/hqdefault.jpg)](https://www.youtube.com/watch?v=1OA8MUI-364)
+[![Play video on YouTube](https://i1.ytimg.com/vi/i7XNrXdiSCE/hqdefault.jpg)](https://www.youtube.com/watch?v=i7XNrXdiSCE)
 
 This plugin provides one example implementation of inline-editing this can be accomplished in the customizer.
 Version 0.1 of this plugin from 2014 was a precursor in some ways to [selective refresh](https://make.wordpress.org/core/2016/02/16/selective-refresh-in-the-customizer/)
