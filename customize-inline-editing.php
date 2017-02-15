@@ -100,11 +100,10 @@ class Customize_Inline_Editing {
 		$deps = array( 'customize-selective-refresh' );
 		wp_enqueue_script( $handle, $src, $deps );
 
-		$handle = 'customize-inline-editing-preview';
-		$src = plugin_dir_url( __FILE__ ) . 'js/customize-preview.js';
+		$handle = 'customize-inline-editing-preview-theme-support-hack';
+		$src = plugin_dir_url( __FILE__ ) . 'js/customize-preview-theme-support-hack.js';
 		$deps = array( 'jquery', 'customize-preview' );
 		wp_enqueue_script( $handle, $src, $deps );
-		wp_add_inline_script( $handle, 'CustomizeInlineEditingPreview.init();' );
 	}
 }
 
