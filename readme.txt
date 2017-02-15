@@ -54,7 +54,7 @@ Eventually rich text formatting may be allowed, specifically for integrations wi
 
 == Changelog ==
 
-= 0.2.0 (Unreleased) =
+= 0.2.0 (2017-02-15) =
 
 * Refactor to make use of selective refresh partials.
 * Integrate with edit shortcuts so that clicking the edit shortcut causes the text to be editable and turns into a checkmark icon while edit mode is enabled.
