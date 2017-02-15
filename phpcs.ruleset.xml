@@ -3,14 +3,16 @@
 
 	<rule ref="WordPress-Core" />
 	<rule ref="WordPress.WP.I18n">
-		<exclude-pattern>*/php/theme-support/*</exclude-pattern>
 		<properties>
-			<property name="text_domain" value="customize-inline-editing" />
+			<property name="text_domain" value="customize-inline-editing,default" />
 		</properties>
 	</rule>
 	<rule ref="WordPress-Docs" />
 
 	<rule ref="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName"><!-- TODO: Eliminate need for this in plugin. -->
 		<severity>0</severity>
 	</rule>
 
