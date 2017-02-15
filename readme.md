@@ -57,10 +57,9 @@ Eventually rich text formatting may be allowed, specifically for integrations wi
 
 ## Changelog ##
 
-### 0.2.0 (Unreleased) ###
-* [Proposed] Refactor to make use of selective refresh partials.
-* [Proposed] Integrate with edit shortcuts so that clicking the edit shortcut causes the text to be editable and turns into a checkmark icon while edit mode is enabled.
-* [Proposed] Integration with frontend customizer powered by the Customize Snapshots plugin, allowing editing of the partials to be done while navigating the frontend of the site as a logged-in user who can `customize`.
+### 0.2.0 (2017-02-15) ###
+* Refactor to make use of selective refresh partials.
+* Integrate with edit shortcuts so that clicking the edit shortcut causes the text to be editable and turns into a checkmark icon while edit mode is enabled.
 
 ### 0.1.3 (2016-07-10) ###
 Ensure that any selective refresh partials associated with the edited settings
