@@ -7,27 +7,38 @@ Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Demonstration of how inline editing can be added to the customizer.
+Demonstration of how inline editing can be implemented in the customizer.
 
 == Description ==
 
-It is surprisingly easy to add inline editing support to the customizer. With inline
-editing, the user no longer has to open a control in the left customizer pane to edit
-a setting. Instead, they can just click on the relevant element in the customizer preview
-and edit the item inline. It could be said that adding inline-editing to the customizer
-improves the UX so much over `postMessage` live editing, as `postMessage` is an improvement
-over the `refresh` transport. There is no need to hunt for the right control,
-and can actually edit with the customizer pane *collapsed!* Here is a demonstration:
+In WordPress 4.5 the [selective refresh](https://make.wordpress.org/core/2016/02/16/selective-refresh-in-the-customizer/)
+framework was introduced in core. One of the key concepts in this framework is the
+“partial”, the region in a document which is selectively refreshed when a related
+setting is modified. This means that one or more settings are linked with a given
+element in the preview. When selective refresh was first was introduced it supported the ability
+for a user to “shift click” on a partial to jump to and focus on the related control
+in the pane. In WordPress 4.7 this was then enhanced with [visible edit shortcuts](https://make.wordpress.org/core/2016/11/10/visible-edit-shortcuts-in-the-customizer-preview/) so that
+users could click (touch even) on the icon to be able to reveal the control in the pane.
+
+The Customize Inline Editing plugin builds on edit shortcuts by allowing the setting
+to be modified inline via direct manipulation in the preview without having focus
+removed and placed on the controls pane. This is particularly useful on <em>mobile devices</em>
+on small screens where a user cannot both see the controls and preview at the same time,
+as can be compared here:
+
+[youtube http://www.youtube.com/watch?v=a_l0LAVUHlw]
+
+Inline editing in this way is also helpful for <em>accessibility</em> since keyboard
+focus remains in the preview at the element being edited, as can be seen in this demonstration
+of inline editing on a desktop browser:
 
 [youtube http://www.youtube.com/watch?v=i7XNrXdiSCE]
 
-This plugin provides one example implementation of inline-editing this can be accomplished in the customizer.
-Version 0.1 of this plugin from 2014 was a precursor in some ways to [selective refresh](https://make.wordpress.org/core/2016/02/16/selective-refresh-in-the-customizer/)
-which was introduced in WordPress 4.5, specifically in regards to how CSS selectors are associated with
-customizer settings. With selective refresh, the setting/selector association is formalized in the “Partial”
-construct and this inline editing plugin can now build upon that.
+This plugin provides one example implementation of inline editing this can be accomplished in the customizer.
+Version 0.1 of this plugin from 2014 was a precursor in some ways to selective refresh, specifically in regards
+to how CSS selectors are associated with customizer settings.
 
-Themes can opt-in to support such inline-editing within the customizer by assigning the appropriate type to the registered partials:
+Themes can opt-in to support this plugin's inline editing within the customizer by assigning the appropriate type to the registered partials:
 
 <pre lang="php">
 add_action( 'customize_register', function( $wp_customize ) {
@@ -48,8 +59,13 @@ tabbing out of the element (blurring it), or clicking the edit icon which then a
 shift-click on an element to edit it.
 
 Currently only basic text fields can currently be edited; styling and any tags added to `contentEditable` areas will be stripped out.
-Eventually rich text formatting may be allowed, specifically for integrations with the Text widget (via JS Widgets) or post content
-(via Customize Posts).
+Eventually rich text formatting may be allowed, specifically for integrations with the Text widget (via [JS Widgets](https://github.com/xwp/wp-js-widgets)) or post content
+(via [Customize Posts](https://github.com/xwp/wp-customize-posts)).
+
+The [selective refresh](https://make.wordpress.org/core/2016/02/16/selective-refresh-in-the-customizer/) writeup from 4.5 concludes
+with a section on a possible future for it and inline editing:
+
+> If we can eliminate full-page refreshes from being the norm for the Customizer, we can start to introduce controls inline with the preview. If the entire preview does not reload, then the inline controls won’t get destroyed by the refresh with each change. For example, consider a widget control floating immediately next to the widget in the sidebar it is editing. With selective refresh, it will then also be possible to <em>eliminate the Customizer altogether</em>. The Customizer could be available to anyone who is logged in, with the controls being bootstrapped on demand when a user wants to edit a given element. There would be no need to navigate way from a page on the frontend to enter a unique Customizer state: the Customizer would come to the user. Any controls not relevant to being inline could remain in the Customizer pane, but it could slide in only as needed instead of appearing by default. That is to say, selective refresh makes the Customizer a much better framework for implementing <strong>frontend editing</strong>.
 
 **Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
 
