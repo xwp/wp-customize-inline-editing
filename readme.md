@@ -68,7 +68,16 @@ Eventually rich text formatting may be allowed, specifically for integrations wi
 The [selective refresh](https://make.wordpress.org/core/2016/02/16/selective-refresh-in-the-customizer/) writeup from 4.5 concludes
 with a section on a possible future for it and inline editing:
 
-> If we can eliminate full-page refreshes from being the norm for the Customizer, we can start to introduce controls inline with the preview. If the entire preview does not reload, then the inline controls won’t get destroyed by the refresh with each change. For example, consider a widget control floating immediately next to the widget in the sidebar it is editing. With selective refresh, it will then also be possible to <em>eliminate the Customizer altogether</em>. The Customizer could be available to anyone who is logged in, with the controls being bootstrapped on demand when a user wants to edit a given element. There would be no need to navigate way from a page on the frontend to enter a unique Customizer state: the Customizer would come to the user. Any controls not relevant to being inline could remain in the Customizer pane, but it could slide in only as needed instead of appearing by default. That is to say, selective refresh makes the Customizer a much better framework for implementing <strong>frontend editing</strong>.
+> If we can eliminate full-page refreshes from being the norm for the Customizer, we can start to introduce
+> controls inline with the preview. If the entire preview does not reload, then the inline controls won’t get
+> destroyed by the refresh with each change. For example, consider a widget control floating immediately next
+> to the widget in the sidebar it is editing. With selective refresh, it will then also be possible to <em>eliminate
+> the Customizer altogether</em>. The Customizer could be available to anyone who is logged in, with the controls
+> being bootstrapped on demand when a user wants to edit a given element. There would be no need to navigate way
+> from a page on the frontend to enter a unique Customizer state: the Customizer would come to the user. Any controls
+> not relevant to being inline could remain in the Customizer pane, but it could slide in only as needed instead of
+> appearing by default. That is to say, selective refresh makes the Customizer a much better framework for
+> implementing <strong>frontend editing</strong>.
 
 **Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
 
