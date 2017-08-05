@@ -3,7 +3,7 @@ Contributors: xwp, westonruter
 Tags: customizer, customize, inline, editing
 Requires at least: 4.7.0
 Tested up to: 4.9-alpha
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,10 @@ The [selective refresh](https://make.wordpress.org/core/2016/02/16/selective-ref
 **Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
 
 == Changelog ==
+
+= 0.2.1 (2017-08-04) =
+
+* Fix readme and bump tested-up-to.
 
 = 0.2.0 (2017-02-15) =
 

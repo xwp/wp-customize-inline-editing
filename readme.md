@@ -7,7 +7,7 @@ Demonstration of how inline editing can be implemented in the customizer.
 **Tags:** [customizer](https://wordpress.org/plugins/tags/customizer), [customize](https://wordpress.org/plugins/tags/customize), [inline](https://wordpress.org/plugins/tags/inline), [editing](https://wordpress.org/plugins/tags/editing)  
 **Requires at least:** 4.7.0  
 **Tested up to:** 4.9-alpha  
-**Stable tag:** 0.2.0  
+**Stable tag:** 0.2.1  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
 [![Build Status](https://travis-ci.org/xwp/wp-customize-inline-editing.svg?branch=master)](https://travis-ci.org/xwp/wp-customize-inline-editing) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com) 
@@ -51,6 +51,9 @@ The [selective refresh](https://make.wordpress.org/core/2016/02/16/selective-ref
 **Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-inline-editing). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-inline-editing/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customize-inline-editing).**
 
 ## Changelog ##
+
+### 0.2.1 (2017-08-04) ###
+* Fix readme and bump tested-up-to.
 
 ### 0.2.0 (2017-02-15) ###
 * Refactor to make use of selective refresh partials.
