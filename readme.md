@@ -6,7 +6,7 @@ Demonstration of how inline editing can be implemented in the customizer.
 **Contributors:** [xwp](https://profiles.wordpress.org/xwp), [westonruter](https://profiles.wordpress.org/westonruter)  
 **Tags:** [customizer](https://wordpress.org/plugins/tags/customizer), [customize](https://wordpress.org/plugins/tags/customize), [inline](https://wordpress.org/plugins/tags/inline), [editing](https://wordpress.org/plugins/tags/editing)  
 **Requires at least:** 4.7.0  
-**Tested up to:** 4.9-alpha  
+**Tested up to:** 4.9  
 **Stable tag:** 0.2.1  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
